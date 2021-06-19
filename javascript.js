@@ -32,7 +32,7 @@ likeNZ.addEventListener("click", () => {
         likeIcon2.innerHTML = `<i class="NZ far fa-thumbs-up"></i>`;
 });
 
-var final_time = new Date("june 18,2021 15:00:00").getTime();
+var final_time = new Date("june 19,2021 15:30:00").getTime();
 
 var x = setInterval(function () {
     var now = new Date().getTime();
@@ -52,7 +52,10 @@ var x = setInterval(function () {
 
     var seconds = Math.floor((diff % (60 * 1000)) / 1000);
     //console.log(seconds);
-
-    document.getElementById("timer").innerHTML = days + "d: " + hours + "hrs: " + minutes + "m: " + seconds + "s"
+    if (diff > 0)
+        document.getElementById("timer").innerHTML = "<h3>BATTLE BEGINS IN</h3>" +
+            days + "d: " + hours + "hrs: " + minutes + "m: " + seconds + "s";
+    else
+        document.getElementById("timer").innerHTML = "<h3>SCOREBOARD & RESULT</h3>"
 
 }, 1000);

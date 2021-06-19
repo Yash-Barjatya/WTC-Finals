@@ -206,3 +206,13 @@ a{
 {
   background:rgb(25, 101, 163);
 }
+#info:hover{
+    
+    color:black;
+     background-color: rgb(25, 101, 163);
+     
+}
+#info{
+    margin-left:-20% ;
+    margin-top: 200px;
+}
