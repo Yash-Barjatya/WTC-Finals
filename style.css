@@ -206,13 +206,41 @@ a{
 {
   background:rgb(25, 101, 163);
 }
-#info:hover{
-    
-    color:black;
-     background-color: rgb(25, 101, 163);
-     
+.container .box .content a
+{
+    position: absolute;
+    bottom:0;
+    left:10%;
+    width: 150px;
+    height: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,1);
+    border-radius: 30px;
+    color: black;
+    z-index: 1;
+    font-weight: 400px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(30px);
 }
-#info{
-    margin-left:-20% ;
-    margin-top: 200px;
+.container .box .content:hover a{
+    letter-spacing: 3px;
+}
+.container .box .content a::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background:linear-gradient(to left,rgba(255,255,255,0.15),transparent) ;
+    transform: skewX(45deg) translateX(0);
+}
+.container .box .content:hover a::before{
+transform: skewX(45deg) translateX(200%);
 }
